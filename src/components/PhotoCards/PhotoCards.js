@@ -71,12 +71,12 @@ const PhotoCards = () => {
         
         <div className="max-w-4xl mx-auto">
           <Swiper
-            modules={[Navigation, Pagination]}
-            spaceBetween={30}
-            slidesPerView={1}
+            modules={[Navigation, EffectCards, Pagination]}
+            effect="cards"
+            grabCursor={true}
             navigation
             pagination={{ clickable: true }}
-            className="py-8"
+            className="mySwiper"
           >
             {photos.map((photo) => (
               <SwiperSlide key={photo.id}>
