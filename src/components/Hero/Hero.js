@@ -29,7 +29,7 @@ const Hero = ({ showConfetti, setShowConfetti }) => {
   }, [setShowConfetti]);
 
   return (
-    <section className="relative py-16 min-h-[80vh] flex items-center justify-center bg-gradient-to-br from-pink-400 to-purple-500 overflow-hidden">
+    <section className="relative py-16 min-h-[80vh] bg-gradient-to-br from-pink-400 to-purple-500 overflow-hidden">
       {showConfetti && (
         <Confetti
           width={dimensions.width}
@@ -39,7 +39,15 @@ const Hero = ({ showConfetti, setShowConfetti }) => {
         />
       )}
       
-      <div className="container mx-auto px-4 text-center z-10">
+      <div className="container mx-auto px-4 text-center z-10 flex flex-col items-center gap-10">
+        <div className="w-full max-w-5xl rounded-2xl bg-white/20 backdrop-blur-sm border border-white/30 p-6 md:p-8 text-white shadow-xl">
+          <h2 className="text-2xl md:text-3xl font-chewy mb-4">A Message For Garima</h2>
+          <p className="text-base md:text-lg leading-relaxed">
+            Happy Birthday Garima if you're seeing i wish always best for you may god bless you with all the good things you've done for me I'll always remember you may next time if we meet, you &amp; I are happy to see each other and moved past our differences
+          </p>
+        </div>
+
+        <div>
         <h1 className="text-5xl md:text-7xl font-chewy text-white mb-8 animate-bounce">
           Happy Birthday Garima! 🎉
         </h1>
@@ -63,6 +71,7 @@ const Hero = ({ showConfetti, setShowConfetti }) => {
         >
           More Confetti! 🎊
         </button>
+        </div>
       </div>
     </section>
   );
